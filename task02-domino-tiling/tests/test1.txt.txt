@@ -1,0 +1,5 @@
+# Test 1: 4x4 board, missing (0,0) and (3,2)
+# Format: n row1 col1 row2 col2
+# Colors: (0,0) = 0, (3,2) = 1 (opposite, valid)
+# Expected: possible = true, 7 dominoes
+4 0 0 3 2

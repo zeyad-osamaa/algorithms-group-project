@@ -1,0 +1,5 @@
+# Test 3: 8x8 board, missing (0,0) and (7,6)
+# Format: n row1 col1 row2 col2
+# Colors: (0,0) = 0, (7,6) = 1 (opposite, valid)
+# Expected: possible = true, 31 dominoes 
+8 0 0 7 6
