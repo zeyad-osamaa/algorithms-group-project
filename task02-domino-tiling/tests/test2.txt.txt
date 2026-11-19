@@ -1,0 +1,5 @@
+# Test 2: 3x3 board, missing (0,0) and (0,1)
+# Format: n row1 col1 row2 col2
+# Colors: (0,0) = 0, (0,1) = 1 (opposite, valid)
+# Expected: possible = false (7 free cells, odd, so they cannot be paired up)
+3 0 0 0 1
