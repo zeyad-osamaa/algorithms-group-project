@@ -11,6 +11,8 @@ package com.mycompany.task02dominotiling;
 public class Task02DominoTiling {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        DominoTiler.Result r = DominoTiler.tileDominoes(4, new DominoTiler.Cell(0, 0), new DominoTiler.Cell(3, 2));
+        System.out.println("possible = " + r.possible());
+        r.dominoes().forEach(System.out::println);
     }
 }

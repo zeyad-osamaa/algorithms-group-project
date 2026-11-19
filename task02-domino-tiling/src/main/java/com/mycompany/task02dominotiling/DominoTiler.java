@@ -10,6 +10,7 @@ package com.mycompany.task02dominotiling;
  */
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class DominoTiler {
 
@@ -78,5 +79,22 @@ public class DominoTiler {
         filled[a.row()][a.col()] = false;
         filled[b.row()][b.col()] = false;
         return false;
+    }
+    
+    public static Result tileDominoes(int n, Cell missing1, Cell missing2) {
+        
+        if (!isValidInput(n, missing1, missing2)) {
+            return new Result(false, new ArrayList<>());
+        }
+
+        boolean[][] filled = new boolean[n][n];
+        filled[missing1.row()][missing1.col()] = true;
+        filled[missing2.row()][missing2.col()] = true;
+
+        List<Domino> placed = new ArrayList<>();
+        if (solve(filled, placed)) {
+            return new Result(true, placed);
+        }
+        return new Result(false, new ArrayList<>());
     }
 }
